@@ -4,266 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Best Chord Change Trainer | BestFret</title>
-  <meta
-    name="description"
-    content="Best Chord Change Trainer helps guitar players improve chord transition speed, accuracy, and consistency through simple structured practice."
-  />
+
   <style>
-    :root {
-      --bg: #ffffff;
-      --text: #1a1a1a;
-      --muted: #5a5a5a;
-      --line: #dcdcdc;
-      --accent: #0b57d0;
-      --panel: #f7f7f7;
-      --button-text: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .wrap {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    body { margin:0; font-family:Arial; }
+    .wrap { max-width:900px; margin:auto; padding:20px; }
 
     header {
-      border-bottom: 1px solid var(--line);
-      background: #ffffff;
+      border-bottom:1px solid #ccc;
+      padding:15px 0;
     }
 
     .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      padding: 18px 0;
-      flex-wrap: wrap;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
     }
 
     .brand {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .brand:hover {
-      text-decoration: none;
-    }
-
-    nav {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
+      font-weight:bold;
+      font-size:20px;
+      text-decoration:none;
+      color:#000;
     }
 
     nav a {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    main {
-      padding: 42px 0 50px;
-    }
-
-    h1 {
-      margin: 0 0 14px;
-      font-size: 2.1rem;
-      line-height: 1.2;
-    }
-
-    .intro {
-      margin: 0 0 24px;
-      color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 760px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 6px;
-      border: 1px solid var(--accent);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .button.primary {
-      background: var(--accent);
-      color: var(--button-text);
-    }
-
-    .button.secondary {
-      background: #ffffff;
-      color: var(--accent);
-    }
-
-    section {
-      margin-bottom: 28px;
-    }
-
-    h2 {
-      margin: 0 0 14px;
-      font-size: 1.45rem;
-    }
-
-    .panel {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
-      padding: 20px;
-    }
-
-    .screenshot {
-      width: 100%;
-      height: 240px;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      font-weight: 700;
-      text-align: center;
-      padding: 12px;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 24px 0 40px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin: 10px 0;
-    }
-
-    @media (max-width: 700px) {
-      h1 {
-        font-size: 1.8rem;
-      }
+      margin-left:15px;
+      text-decoration:none;
+      color:#000;
+      font-weight:bold;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="wrap topbar">
-      <a class="brand" href="index.html">BestFret</a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="fretboard-note-trainer.html">Fretboard Note Trainer</a>
-        <a href="fretboard-note-tab-trainer.html">Note &amp; TAB Trainer</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="wrap">
-    <section>
-      <h1>Best Chord Change Trainer</h1>
-      <p class="intro">
-        A simple guitar practice app designed to help you improve chord changes
-        with more speed, control, and consistency through repeatable training.
-      </p>
-      <div class="buttons">
-        <a class="button primary" href="https://play.google.com/store/apps/details?id=com.bestfret.chordchangetrainer">Open in Google Play</a>
-        <a class="button secondary" href="index.html">Back to Home</a>
-      </div>
-    </section>
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="index.html">BestFret</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="fretboard-note-trainer.html">Fretboard Note Trainer</a>
+      <a href="fretboard-note-tab-trainer.html">Note & TAB Trainer</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
 
-    <section>
-      <div class="panel">
-        <div class="screenshot">App screenshot to be added</div>
-      </div>
-    </section>
+<div class="wrap">
+  <h1>Best Chord Change Trainer</h1>
+  <p>Practice chord changes with structure and repetition.</p>
+</div>
 
-    <section>
-      <div class="panel">
-        <h2>What it is for</h2>
-        <ul>
-          <li>Improve speed when moving between chords</li>
-          <li>Build cleaner changes with fewer hesitations</li>
-          <li>Practice chord pairs in a focused, measurable way</li>
-          <li>Support regular daily guitar improvement</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <div class="panel">
-        <h2>Who it suits</h2>
-        <ul>
-          <li>Beginners learning their first open chords</li>
-          <li>Players wanting smoother changes between familiar chords</li>
-          <li>Anyone needing structured chord transition practice</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <div class="panel">
-        <h2>Get started</h2>
-        <ul>
-          <li>Open the Google Play listing</li>
-          <li>Install the app on your Android device</li>
-          <li>Choose your chord practice routine</li>
-          <li>Train regularly for best results</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div>© 2026 BestFret</div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
-      </div>
-      <div>Built for practice. No ads. No subscriptions.</div>
-    </div>
-  </footer>
 </body>
 </html>
