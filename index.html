@@ -19,78 +19,319 @@
       --button-text: #ffffff;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text);
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .wrap {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0 20px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 18px 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 56px 0 40px;
+    }
+
+    .hero h1 {
+      margin: 0 0 16px;
+      font-size: 2.2rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     .button {
-      padding: 10px 16px;
-      border: 1px solid var(--accent);
+      display: inline-block;
+      padding: 12px 18px;
       border-radius: 6px;
-      background: var(--accent);
-      color: #fff;
+      border: 1px solid var(--accent);
       font-weight: 700;
-      cursor: pointer;
+      text-decoration: none;
     }
 
-    footer {
-      margin-top: 40px;
-      border-top: 1px solid var(--line);
-      padding-top: 20px;
+    .button.primary {
+      background: var(--accent);
+      color: var(--button-text);
+    }
+
+    .button.secondary {
+      background: #ffffff;
+      color: var(--accent);
+    }
+
+    section {
+      padding: 28px 0;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.6rem;
+    }
+
+    .section-intro {
+      margin: 0 0 22px;
       color: var(--muted);
     }
 
-    .email-row {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 10px;
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
-    .email-text {
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: var(--muted);
+    }
+
+    .screenshot {
+      width: 100%;
+      height: 180px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
       font-weight: 700;
-      color: #000;
+      margin-bottom: 16px;
+      text-align: center;
+      padding: 12px;
+    }
+
+    .card-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .video-block,
+    .tester-block {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 20px;
+    }
+
+    footer {
+      margin-top: 30px;
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="wrap topbar">
+      <div class="brand">BestFret</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#apps">Apps</a>
+        <a href="#videos">Videos</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="wrap">
+  <main class="wrap">
+    <section class="hero">
+      <h1>Learn guitar faster with structured fretboard training</h1>
+      <p>
+        Simple practice apps for chord changes, fretboard notes, and TAB-based
+        note learning. BestFret is built to support clear, repeatable guitar
+        practice for beginners and developing players.
+      </p>
+      <div class="buttons">
+        <a class="button primary" href="#apps">View Apps</a>
+        <a class="button secondary" href="#videos">Watch Videos</a>
+      </div>
+    </section>
 
-  <h1>BestFret</h1>
+    <section id="apps">
+      <h2>BestFret Apps</h2>
+      <p class="section-intro">
+        Three focused guitar training apps designed to reinforce practical
+        fretboard understanding and cleaner playing.
+      </p>
 
-  <p>Guitar training apps for structured practice.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Best Chord Change Trainer</h3>
+          <p>Build faster, cleaner chord changes with structured timed practice.</p>
+          <div class="screenshot">App screenshot to be added</div>
+          <div class="card-buttons">
+            <a class="button secondary" href="chord-change-trainer.html">App Page</a>
+            <a class="button primary" href="https://play.google.com/store/apps/details?id=com.bestfret.chordchangetrainer">Open in Google Play</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Best Fretboard Note Trainer</h3>
+          <p>Learn note locations across the first 12 frets with focused visual drills.</p>
+          <div class="screenshot">App screenshot to be added</div>
+          <div class="card-buttons">
+            <a class="button secondary" href="fretboard-note-trainer.html">App Page</a>
+            <a class="button primary" href="https://play.google.com/store/apps/details?id=com.bestfret.fretboardnotetrainer">Open in Google Play</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Best Fretboard Note &amp; TAB Trainer</h3>
+          <p>Connect guitar TAB patterns with real fretboard note locations.</p>
+          <div class="screenshot">App screenshot to be added</div>
+          <div class="card-buttons">
+            <a class="button secondary" href="fretboard-note-tab-trainer.html">App Page</a>
+            <a class="button primary" href="https://play.google.com/store/apps/details?id=com.bestfret.fretboardnotetabtrainer">Open in Google Play</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why these apps</h2>
+      <ul>
+        <li>Built for real daily practice</li>
+        <li>No fluff, no unnecessary complexity</li>
+        <li>Clear visual learning</li>
+        <li>Beginner-friendly but useful long term</li>
+        <li>Designed to reinforce fretboard understanding</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="tester-block">
+        <h2>Get Started</h2>
+        <p class="section-intro">
+          Choose an app, open its app page, or go directly to Google Play.
+        </p>
+        <ol>
+          <li>Select the app that matches your practice goal</li>
+          <li>Open its detail page or Google Play listing</li>
+          <li>Install and begin practice</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="videos">
+      <div class="video-block">
+        <h2>Learn with short videos</h2>
+        <p class="section-intro">
+          Short demonstrations, beginner tips, and app walkthroughs.
+        </p>
+        <a class="button secondary" href="https://www.youtube.com/@GregHarris-p7y" target="_blank">Visit YouTube</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <div>© 2026 BestFret</div>
-
-    <div class="email-row">
-      <span class="email-text" id="emailText">support@bestfret.com</span>
-      <button class="button" onclick="copyEmail()">Copy Email</button>
+    <div class="wrap">
+      <div>© 2026 BestFret</div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <span>support@bestfret.com</span>
+      </div>
+      <div>Built for practice. No ads. No subscriptions.</div>
     </div>
-
-    <div>Built for practice. No ads. No subscriptions.</div>
   </footer>
-
-</div>
-
-<script>
-function copyEmail() {
-  const email = document.getElementById("emailText").innerText;
-  navigator.clipboard.writeText(email);
-  alert("Email copied: " + email);
-}
-</script>
-
 </body>
 </html>
