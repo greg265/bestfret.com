@@ -1,269 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Best Fretboard Note Trainer | BestFret</title>
-  <meta
-    name="description"
-    content="Best Fretboard Note Trainer helps guitar players learn note locations across the first 12 frets through simple structured visual practice."
-  />
+  <meta charset="UTF-8">
+  <title>Fretboard Note Trainer | BestFret</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    :root {
-      --bg: #ffffff;
-      --text: #1a1a1a;
-      --muted: #5a5a5a;
-      --line: #dcdcdc;
-      --accent: #0b57d0;
-      --panel: #f7f7f7;
-      --button-text: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .wrap {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 20px;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #111;
     }
 
     header {
-      border-bottom: 1px solid var(--line);
-      background: #ffffff;
-    }
-
-    .topbar {
+      padding: 10px 20px;
+      border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
-      padding: 18px 0;
-      flex-wrap: wrap;
     }
 
-    .brand {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text);
+    header a {
       text-decoration: none;
+      color: black;
+      margin-left: 16px;
+      font-size: 14px;
     }
 
-    .brand:hover {
-      text-decoration: none;
-    }
-
-    nav {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    main {
-      padding: 42px 0 50px;
-    }
-
-    h1 {
-      margin: 0 0 14px;
-      font-size: 2.1rem;
-      line-height: 1.2;
-    }
-
-    .intro {
-      margin: 0 0 24px;
-      color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 760px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 6px;
-      border: 1px solid var(--accent);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .button.primary {
-      background: var(--accent);
-      color: var(--button-text);
-    }
-
-    .button.secondary {
-      background: #ffffff;
-      color: var(--accent);
-    }
-
-    section {
-      margin-bottom: 28px;
-    }
-
-    h2 {
-      margin: 0 0 14px;
-      font-size: 1.45rem;
-    }
-
-    .panel {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
       padding: 20px;
     }
 
-    .screenshot {
-      width: 100%;
-      height: 240px;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      background: #ffffff;
+    .title-row {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      font-weight: 700;
-      text-align: center;
-      padding: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    ul {
+    h1 {
+      font-size: 28px;
       margin: 0;
-      padding-left: 20px;
     }
 
-    li {
-      margin-bottom: 10px;
+    .top-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .top-buttons a {
+      padding: 8px 16px;
+      border: 2px solid #007BFF;
+      border-radius: 20px;
+      text-decoration: none;
+      color: #007BFF;
+      font-size: 14px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #444;
+      margin: 10px 0 20px;
+      line-height: 1.5;
+    }
+
+    .content {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .image-column {
+      flex: 1 1 500px;
+      text-align: center;
+    }
+
+    .image-column img {
+      max-height: 70vh;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+    }
+
+    .text-column {
+      flex: 1 1 400px;
+    }
+
+    .section {
+      margin-bottom: 18px;
+    }
+
+    .section h2 {
+      font-size: 20px;
+      margin: 0 0 8px;
+    }
+
+    .section ul {
+      margin: 0;
+      padding-left: 18px;
+      line-height: 1.5;
     }
 
     footer {
-      border-top: 1px solid var(--line);
-      padding: 24px 0 40px;
-      color: var(--muted);
-      font-size: 0.95rem;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #666;
+      border-top: 1px solid #ddd;
+      margin-top: 30px;
     }
 
-    .footer-links {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin: 10px 0;
-    }
-
-    @media (max-width: 700px) {
-      h1 {
-        font-size: 1.8rem;
+    @media (max-width: 800px) {
+      .content {
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap topbar">
-      <a class="brand" href="index.html">BestFret</a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="chord-change-trainer.html">Chord Change Trainer</a>
-        <a href="fretboard-note-tab-trainer.html">Note &amp; TAB Trainer</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
+
+<header>
+  <div><a href="index.html"><strong>BestFret</strong></a></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="fretboard-note-trainer.html">Fretboard Note Trainer</a>
+    <a href="fretboard-note-tab-trainer.html">Note & TAB Trainer</a>
+    <a href="chord-change-trainer.html">Chord Change Trainer</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="title-row">
+    <h1>Fretboard Note Trainer</h1>
+    <div class="top-buttons">
+      <a href="https://play.google.com/store/apps/details?id=com.bestfret.fretboardnotetrainer">View on Google Play</a>
+      <a href="index.html">Back to Home</a>
     </div>
-  </header>
+  </div>
 
-  <main class="wrap">
-    <section>
-      <h1>Best Fretboard Note Trainer</h1>
-      <p class="intro">
-        A simple guitar practice app designed to help you learn note positions
-        across the first 12 frets using clear, repeatable visual practice.
-      </p>
-      <div class="buttons">
-        <a class="button primary" href="https://play.google.com/store/apps/details?id=com.bestfret.fretboardnotetrainer">Open in Google Play</a>
-        <a class="button secondary" href="index.html">Back to Home</a>
-      </div>
-    </section>
+  <div class="subtitle">
+    Learn note positions across the fretboard with structured visual practice.
+  </div>
 
-    <section>
-      <div class="panel">
-        <div class="screenshot">App screenshot to be added</div>
-      </div>
-    </section>
+  <div class="content">
 
-    <section>
-      <div class="panel">
-        <h2>What it is for</h2>
-        <ul>
-          <li>Learn note names across all six strings</li>
-          <li>Reinforce fretboard memory through repetition</li>
-          <li>Improve speed in locating notes on the first 12 frets</li>
-          <li>Support structured daily fretboard practice</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <div class="panel">
-        <h2>Who it suits</h2>
-        <ul>
-          <li>Beginners starting to learn the fretboard</li>
-          <li>Players wanting stronger note-location recall</li>
-          <li>Anyone wanting a clearer understanding of guitar note layout</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <div class="panel">
-        <h2>Get started</h2>
-        <ul>
-          <li>Open the Google Play listing</li>
-          <li>Install the app on your Android device</li>
-          <li>Begin visual note-location practice</li>
-          <li>Use regular repetition for best results</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div>© 2026 BestFret</div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
-      </div>
-      <div>Built for practice. No ads. No subscriptions.</div>
+    <div class="image-column">
+      <img src="images/fretboard-note-trainer-page.png" alt="Fretboard Note Trainer screenshot">
     </div>
-  </footer>
+
+    <div class="text-column">
+
+      <div class="section">
+        <h2>What this app helps you practise</h2>
+        <ul>
+          <li>Recognising note names across the fretboard</li>
+          <li>Faster note location recall</li>
+          <li>Clearer understanding of fretboard layout</li>
+          <li>More confident navigation between strings and frets</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>How it works</h2>
+        <ul>
+          <li>Select the note set or practice mode</li>
+          <li>View note positions on the fretboard</li>
+          <li>Use repetition to reinforce note-location memory</li>
+          <li>Build recognition speed through regular use</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Key features</h2>
+        <ul>
+          <li>Structured fretboard note practice</li>
+          <li>Simple, visual learning format</li>
+          <li>Designed for repeatable daily use</li>
+          <li>Supports steady, practical improvement</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Who it is for</h2>
+        <ul>
+          <li>Beginners learning the fretboard</li>
+          <li>Players wanting faster note recognition</li>
+          <li>Anyone building a stronger foundation for guitar playing</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  © BestFret
+</footer>
+
 </body>
 </html>
