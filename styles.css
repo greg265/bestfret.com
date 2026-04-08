@@ -24,24 +24,24 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  padding: 16px 0;
+  padding: 12px 0;
 }
 
 .site-title {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 12px;
 }
 
 .site-nav a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .site-nav a:hover {
@@ -54,37 +54,37 @@ body {
 }
 
 .hero-inner {
-  padding: 42px 0;
+  padding: 24px 0;
 }
 
 .hero-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 12px;
+  gap: 12px;
+  margin-bottom: 6px;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: 34px;
-  line-height: 1.15;
+  font-size: 28px;
+  line-height: 1.2;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .button {
   display: inline-block;
-  padding: 10px 16px;
+  padding: 8px 14px;
   background: #2563eb;
   color: #ffffff;
   text-decoration: none;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .button:hover {
@@ -101,39 +101,42 @@ body {
 
 .hero-text {
   margin: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  max-width: 760px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .apps-section {
-  padding: 32px 0 40px 0;
+  padding: 24px 0 32px 0;
 }
 
 .section-heading {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
+/* KEY FIX — smaller heading so it fits on one line */
 .section-heading h2 {
-  margin: 0 0 6px 0;
-  font-size: 28px;
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  white-space: nowrap;
 }
 
 .section-heading p {
   margin: 0;
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 13px;
+  line-height: 1.3;
 }
 
 .app-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 12px;
 }
 
 .app-card {
   border: 1px solid #dddddd;
-  padding: 8px;
+  padding: 6px;
   background: #ffffff;
 }
 
@@ -150,17 +153,17 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .card-qr {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
-  width: 72px;
-  height: 72px;
+  right: 8px;
+  bottom: 8px;
+  width: 64px;
+  height: 64px;
   background: #ffffff;
-  padding: 4px;
+  padding: 3px;
   border: 1px solid #cccccc;
   border-radius: 6px;
   display: block;
@@ -169,21 +172,20 @@ body {
 
 .tab-qr-bottom {
   display: block;
-  width: 72px;
-  height: 72px;
-  margin: 8px auto 0 auto;
+  width: 64px;
+  height: 64px;
+  margin: 6px auto 0 auto;
 }
 
 .app-card h3 {
-  margin: 0 0 3px 0;
-  font-size: 16px;
-  line-height: 1.2;
+  margin: 0 0 2px 0;
+  font-size: 14px;
 }
 
 .app-card p {
   margin: 0;
-  font-size: 13px;
-  line-height: 1.3;
+  font-size: 12px;
+  line-height: 1.2;
 }
 
 @media (max-width: 1100px) {
