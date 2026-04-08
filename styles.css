@@ -146,7 +146,6 @@ body {
   position: relative;
 }
 
-/* main screenshot image only */
 .app-image-wrap > img:not(.card-qr) {
   display: block;
   width: 100%;
@@ -154,7 +153,6 @@ body {
   margin-bottom: 6px;
 }
 
-/* default QR position: bottom-right */
 .card-qr {
   position: absolute;
   right: 10px;
@@ -169,11 +167,11 @@ body {
   margin-bottom: 0;
 }
 
-/* TAB trainer only: bottom-centre */
-.app-card:nth-child(2) .card-qr {
-  left: 50%;
-  right: auto;
-  transform: translateX(-50%);
+.tab-qr-bottom {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: 8px auto 0 auto;
 }
 
 .app-card h3 {
