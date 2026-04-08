@@ -115,17 +115,10 @@ body {
   margin-bottom: 14px;
 }
 
-/* KEY FIX — smaller heading so it fits on one line */
 .section-heading h2 {
   margin: 0 0 4px 0;
   font-size: 18px;
   white-space: nowrap;
-}
-
-.section-heading p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.3;
 }
 
 .app-grid {
@@ -147,13 +140,14 @@ body {
 
 .app-image-wrap {
   position: relative;
+  height: 340px; /* INCREASED HEIGHT */
+  overflow: hidden;
 }
 
 .app-image-wrap > img:not(.card-qr) {
-  display: block;
   width: 100%;
-  height: auto;
-  margin-bottom: 4px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-qr {
@@ -166,8 +160,6 @@ body {
   padding: 3px;
   border: 1px solid #cccccc;
   border-radius: 6px;
-  display: block;
-  margin-bottom: 0;
 }
 
 .tab-qr-bottom {
@@ -196,5 +188,9 @@ body {
 
   .app-grid {
     grid-template-columns: 1fr;
+  }
+
+  .app-image-wrap {
+    height: 280px;
   }
 }
