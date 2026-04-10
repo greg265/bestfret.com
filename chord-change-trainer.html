@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chord Change Trainer | BestFret</title>
+  <title>Chord Change Trainer Exercises App | Improve Guitar Chord Transitions | BestFret</title>
   <meta name="description" content="Improve guitar chord changes with structured practice. This app helps you build speed, accuracy, and smooth transitions between chords.">
   <link rel="canonical" href="https://bestfret.com/chord-change-trainer.html">
   <meta name="robots" content="index, follow">
@@ -24,11 +24,39 @@
       align-items: center;
     }
 
-    header a {
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand a.home-link {
+      font-size: 18px;
+      font-weight: bold;
+      color: #007BFF;
+      text-decoration: underline;
+    }
+
+    .brand span {
+      font-size: 13px;
+      color: #444;
+    }
+
+    .brand span a {
+      color: #000;
+      text-decoration: underline;
+      margin: 0 4px;
+    }
+
+    header nav a {
       text-decoration: none;
       color: black;
       margin-left: 16px;
       font-size: 14px;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
     }
 
     .container {
@@ -128,14 +156,20 @@
 <body>
 
 <header>
-  <div><a href="index.html"><strong>BestFret</strong></a></div>
-  <div>
+  <div class="brand">
+    <a class="home-link" href="index.html">BestFret Home</a>
+    <span>Also try: 
+      <a href="fretboard-note-trainer.html">Fretboard Note Trainer Exercises</a> | 
+      <a href="fretboard-note-tab-trainer.html">Note-TAB Trainer Exercises</a>
+    </span>
+  </div>
+  <nav>
     <a href="index.html">Home</a>
     <a href="fretboard-note-trainer.html">Fretboard Note Trainer</a>
     <a href="fretboard-note-tab-trainer.html">Note & TAB Trainer</a>
     <a href="chord-change-trainer.html">Chord Change Trainer</a>
     <a href="privacy.html">Privacy</a>
-  </div>
+  </nav>
 </header>
 
 <div class="container">
