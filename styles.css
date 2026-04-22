@@ -194,3 +194,13 @@ body {
     height: 280px;
   }
 }
+
+.qr-below {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.qr-below img {
+  width: 72px;
+  height: 72px;
+}
