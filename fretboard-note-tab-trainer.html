@@ -83,6 +83,23 @@
       gap: 10px;
     }
 
+    .download-box {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .download-box p {
+      margin: 0 0 6px;
+      font-size: 13px;
+      color: #444;
+    }
+
+    .download-box img {
+      width: 92px;
+      height: 92px;
+      border: 1px solid #ddd;
+    }
+
     .top-buttons a {
       padding: 8px 16px;
       border: 2px solid #007BFF;
@@ -150,6 +167,18 @@
       .content {
         flex-direction: column;
       }
+
+      .title-row {
+        align-items: flex-start;
+      }
+
+      .top-buttons {
+        flex-wrap: wrap;
+      }
+
+      .download-box {
+        text-align: left;
+      }
     }
   </style>
 </head>
@@ -176,9 +205,15 @@
 
   <div class="title-row">
     <h1>Fretboard Note & TAB Trainer</h1>
-    <div class="top-buttons">
-      <a href="https://play.google.com/store/apps/details?id=com.bestfret.fretboardnotetabtrainer">View on Google Play</a>
-      <a href="index.html">Back to Home</a>
+    <div>
+      <div class="top-buttons">
+        <a href="https://play.google.com/store/apps/details?id=com.bestfret.fretboardnotetabtrainer">View on Google Play</a>
+        <a href="index.html">Back to Home</a>
+      </div>
+      <div class="download-box">
+        <p>Scan to open on Google Play</p>
+        <img src="images/qr-tab.png" alt="QR code to open Fretboard Note & TAB Trainer on Google Play">
+      </div>
     </div>
   </div>
 
