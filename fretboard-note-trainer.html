@@ -111,11 +111,24 @@
       text-align: center;
     }
 
+    .image-with-qr {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .image-column img {
       max-height: 70vh;
       max-width: 100%;
       height: auto;
       border: 1px solid #ddd;
+    }
+
+    .image-with-qr .note-qr {
+      width: 92px;
+      height: 92px;
+      border: 1px solid #ddd;
+      flex: 0 0 auto;
     }
 
     .text-column {
@@ -149,6 +162,11 @@
     @media (max-width: 800px) {
       .content {
         flex-direction: column;
+      }
+
+      .image-with-qr {
+        display: flex;
+        justify-content: center;
       }
     }
   </style>
@@ -189,7 +207,10 @@
   <div class="content">
 
     <div class="image-column">
-      <img src="images/fretboard-note-trainer-page.png" alt="Fretboard Note Trainer screenshot">
+      <div class="image-with-qr">
+        <img src="images/fretboard-note-trainer-page.png" alt="Fretboard Note Trainer screenshot">
+        <img class="note-qr" src="images/qr-code.png" alt="QR code to open Fretboard Note Trainer on Google Play">
+      </div>
     </div>
 
     <div class="text-column">
