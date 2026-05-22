@@ -111,6 +111,18 @@
       text-align: center;
     }
 
+    .image-stack {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .image-stack .qr-inline {
+      width: 92px;
+      height: 92px;
+      margin-top: 2px;
+    }
+
     .image-column img {
       max-height: 70vh;
       max-width: 100%;
@@ -189,7 +201,10 @@
   <div class="content">
 
     <div class="image-column">
-      <img src="images/chord-change-trainer-page.png" alt="Chord Change Trainer screenshot">
+      <div class="image-stack">
+        <img class="qr-inline" src="images/qr-chord.png" alt="QR code to open Chord Change Trainer on Google Play">
+        <img src="images/chord-change-trainer-page.png" alt="Chord Change Trainer screenshot">
+      </div>
     </div>
 
     <div class="text-column">
